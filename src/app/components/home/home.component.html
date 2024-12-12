@@ -1,0 +1,23 @@
+<p>Oi do video, {{ name }}</p>
+
+<button (click)="submit()">clique</button>
+
+<h1 *ngIf="deveMostrarTitulo">Meu titúlo</h1>
+
+@if(deveMostrarTitulo) {
+<h1>Meu titúlo</h1>
+} @else if(name == "Gustavo") {
+<h1>meu titúlo para Gustavo</h1>
+} @else {
+<h1>Não é verdadeiro</h1>
+}
+
+<p *ngFor="let item of listItems">{{ item }}</p>
+
+@for(item of listItems; track item) {
+<p>
+  {{ item }}
+</p>
+}
+
+<h1>{{ minhaPropsDeFora }}</h1>
